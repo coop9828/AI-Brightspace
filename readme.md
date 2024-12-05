@@ -2,8 +2,6 @@
 
 An AI-powered system that automatically generates discussion questions from educational content, creates grading requirements, and evaluates student responses with detailed feedback. This tool aims to assist educators in creating engaging discussion questions and providing consistent, detailed feedback to students.
 
-![System Architecture Diagram](./images/system-architecture.svg "System Architecture Overview")
-
 ## 🌟 Features
 
 - **Intelligent Question Generation**: Automatically creates relevant discussion questions from educational content
@@ -19,7 +17,9 @@ An AI-powered system that automatically generates discussion questions from educ
 <details>
   <summary>Generated Information</summary>
   ![Example Output](./images/Questions.png "LLM Generated Questions")
+  
   ![Example Output](./images/Requirements.png "LLM Generated Requirements")
+  
   ![Example Output](./images/feedback.png "LLM Generated Questions")
 </details>
 
@@ -67,6 +67,9 @@ pipe = pipeline(
 
 
 ## 🏗️ Project Structure
+
+![System Architecture Diagram](./images/system-architecture.svg "System Architecture Overview")
+
 
 ```
 ├── main_app.py       # Main application logic and LLM pipeline
