@@ -14,16 +14,6 @@ An AI-powered system that automatically generates discussion questions from educ
   - Areas of strength analysis
   - Actionable improvement suggestions
   - Numerical scoring with detailed breakdowns
-<details>
-  <summary>Generated Information</summary>
-  
-  ![Example Output](./images/Questions.png "LLM Generated Questions")
-  
-  ![Example Output](./images/Requirements.png "LLM Generated Requirements")
-  
-  ![Example Output](./images/feedback.png "LLM Generated Questions")
-</details>
-
 
 ## 🤖 Model Information
 
@@ -127,6 +117,17 @@ python main_app.py --input_file path/to/lecture.txt
 ```bash
 python main_app.py --input_file path/to/lecture.txt --model meta-llama/Llama-3.2-1B-Instruct --threshold 0.6
 ```
+
+<details>
+  <summary>Generated Information</summary>
+  
+  ![Example Output](./images/Questions.png "LLM Generated Questions")
+  
+  ![Example Output](./images/Requirements.png "LLM Generated Requirements")
+  
+  ![Example Output](./images/feedback.png "LLM Generated Questions")
+</details>
+
 
 ## 🔍 Components
 
