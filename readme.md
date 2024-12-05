@@ -1,91 +1,144 @@
 # Auto Discussion Question Generator and Grader
 
-An AI-powered system that automatically generates discussion questions from educational content, creates grading requirements, and evaluates student responses with detailed feedback.
+An AI-powered system that automatically generates discussion questions from educational content, creates grading requirements, and evaluates student responses with detailed feedback. This tool aims to assist educators in creating engaging discussion questions and providing consistent, detailed feedback to students.
 
-## Features
+[Insert System Architecture Diagram Here - showing flow from input text → question generation → grading requirements → student response → feedback]
 
-- Generates relevant discussion questions from input text
-- Creates specific grading requirements with point allocations
-- Evaluates student responses using both LLM and automated grading
-- Provides detailed feedback with:
+## 🌟 Features
+
+- **Intelligent Question Generation**: Automatically creates relevant discussion questions from educational content
+- **Automated Grading Framework**: 
+  - Creates specific grading requirements with point allocations
+  - Weighted scoring system
+  - Concept coverage analysis
+- **Comprehensive Feedback System**:
   - Missing concepts identification
-  - Areas of strength
-  - Suggestions for improvement
-  - Numerical scoring
+  - Areas of strength analysis
+  - Actionable improvement suggestions
+  - Numerical scoring with detailed breakdowns
 
-## Project Structure
+[Insert Screenshot of Example Output Here - showing generated question, requirements, and feedback]
+
+## 🏗️ Project Structure
 
 ```
-├── main_app.py       # Main application logic
-├── formatters.py     # Response cleaning utilities
-└── grader.py         # Grading system implementation
+├── main_app.py       # Main application logic and LLM pipeline
+├── formatters.py     # Response cleaning and text formatting utilities
+├── grader.py         # Automated grading system implementation
+└── requirements.txt  # Project dependencies
 ```
 
-## Requirements
+## 📋 Requirements
 
+### Core Dependencies
+```txt
+torch>=2.0.0
+transformers>=4.30.0
+huggingface_hub>=0.16.0
+spacy>=3.5.0
+tensorflow>=2.13.0
+scikit-learn>=1.3.0
+```
+
+### System Requirements
 - Python 3.8+
-- huggingface_hub
-- transformers
-- scikit-learn
-- spacy
-- torch
-- en_core_web_sm (spaCy model)
+- CUDA-compatible GPU (recommended for faster processing)
+- 8GB+ RAM
+- Internet connection for model downloads
 
-## Setup
+## 🚀 Setup
 
-1. Install dependencies:
+1. Clone the repository:
 ```bash
-pip install huggingface_hub transformers scikit-learn spacy torch
+git clone https://github.com/yourusername/auto-discussion-grader.git
+cd auto-discussion-grader
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 ```
 
-2. Configure Hugging Face access:
-   - Get an API token from Hugging Face
-   - Set it as an environment variable or in your configuration
-
-## Usage
-
-1. Prepare your lecture content in a text file
-2. Run the application:
-```bash
-python main_app.py
+3. Configure Hugging Face access:
+```python
+# Set your Hugging Face API token
+export HUGGINGFACE_TOKEN='your_token_here'
 ```
-3. The system will:
-   - Generate a discussion question
-   - Create grading requirements
-   - Accept student responses
-   - Provide detailed feedback
 
-## Components
+[Insert Screenshot of Successful Setup Here]
+
+## 💡 Usage
+
+### Basic Usage
+```bash
+python main_app.py --input_file path/to/lecture.txt
+```
+
+### Advanced Configuration
+```bash
+python main_app.py --input_file path/to/lecture.txt --model meta-llama/Llama-3.2-1B-Instruct --threshold 0.6
+```
+
+[Insert GIF/Video of Usage Example Here]
+
+## 🔍 Components
 
 ### AutoGrader
-- Analyzes responses using NLP techniques
-- Calculates concept coverage and response depth
-- Generates detailed feedback on missing concepts
+- NLP-based response analysis
+- Concept coverage calculation
+- Semantic similarity matching
+- Response depth evaluation
 
 ### AnswerAssessment
-- Combines LLM and automated grading approaches
-- Provides composite scoring
-- Generates actionable feedback
+- Hybrid LLM-automated grading
+- Composite scoring system
+- Detailed feedback generation
+- Performance analytics
 
-## Limitations
+[Insert Component Interaction Diagram Here]
 
-- Feedback generation quality may vary without specific training data
+## ⚠️ Limitations
+
+- Feedback quality depends on input text clarity
 - Limited to text-based educational content
-- Requires careful tuning of grading parameters
-- LLM-based feedback may need human verification
+- Requires parameter tuning for different subjects
+- LLM responses need occasional verification
+- Processing speed depends on hardware capabilities
 
-## Future Improvements
+## 🔮 Future Improvements
 
-- Integration with learning management systems
-- Enhanced feedback loop for instructors
-- Support for multiple question types
-- Training on domain-specific educational data
+- LMS integration (Canvas, Blackboard, Moodle)
+- Enhanced instructor feedback loop
+- Multiple question type support
+- Domain-specific training capabilities
+- Real-time grading optimization
 
-## Contributing
+## 📚 Related Resources
 
-Feel free to open issues or submit pull requests with improvements.
+### AI in Education
+- [Carnegie Learning's AI Research](https://www.carnegielearning.com/research/)
+- [EdX's AI in Education Course](https://www.edx.org/learn/artificial-intelligence)
+- [Stanford's AI in Education Research](https://ai.stanford.edu/research/ai-education)
 
-## License
+### Technical Resources
+- [Hugging Face Transformers Documentation](https://huggingface.co/docs/transformers/index)
+- [spaCy Course](https://course.spacy.io/)
+- [Scikit-learn Documentation](https://scikit-learn.org/stable/documentation.html)
 
-[Insert your chosen license here]
+### Research Papers
+1. ["AI in Education: Current Trends and Future Perspectives"](https://www.frontiersin.org/articles/10.3389/frai.2022.871043/)
+2. ["Automated Essay Scoring and the Future of Educational Assessment"](https://eric.ed.gov/?id=EJ1067807)
+3. ["Natural Language Processing in Education"](https://www.sciencedirect.com/science/article/pii/S2666920X21000157)
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## 🙏 Acknowledgments
+
+- Meta AI for the LLaMA model
+- Hugging Face for transformer implementations
+- spaCy for NLP tools
+- The educational technology community
+
