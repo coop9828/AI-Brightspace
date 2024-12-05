@@ -1,0 +1,66 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Input Section -->
+    <g transform="translate(50,50)">
+        <rect x="0" y="0" width="150" height="100" rx="10" fill="#e1f5fe" stroke="#81d4fa" stroke-width="2"/>
+        <text x="75" y="40" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Input</text>
+        <text x="75" y="70" text-anchor="middle" font-family="Arial" font-size="12">Lecture Text</text>
+    </g>
+
+    <!-- Question Generation -->
+    <g transform="translate(300,30)">
+        <rect x="0" y="0" width="200" height="140" rx="10" fill="#fff3e0" stroke="#ffcc80" stroke-width="2"/>
+        <text x="100" y="30" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Question Generation</text>
+        <text x="100" y="60" text-anchor="middle" font-family="Arial" font-size="12">LLaMA Model</text>
+        <text x="100" y="90" text-anchor="middle" font-family="Arial" font-size="12">Discussion Question</text>
+        <text x="100" y="120" text-anchor="middle" font-family="Arial" font-size="12">Grading Requirements</text>
+    </g>
+
+    <!-- AutoGrader System -->
+    <g transform="translate(50,200)">
+        <rect x="0" y="0" width="300" height="180" rx="10" fill="#f3e5f5" stroke="#ce93d8" stroke-width="2"/>
+        <text x="150" y="30" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">AutoGrader System</text>
+        <rect x="20" y="50" width="120" height="40" rx="5" fill="#white" stroke="#ce93d8"/>
+        <text x="80" y="75" text-anchor="middle" font-family="Arial" font-size="12">Concept Coverage</text>
+        <rect x="160" y="50" width="120" height="40" rx="5" fill="white" stroke="#ce93d8"/>
+        <text x="220" y="75" text-anchor="middle" font-family="Arial" font-size="12">Semantic Similarity</text>
+        <rect x="90" y="110" width="120" height="40" rx="5" fill="white" stroke="#ce93d8"/>
+        <text x="150" y="135" text-anchor="middle" font-family="Arial" font-size="12">Response Depth</text>
+    </g>
+
+    <!-- LLM Feedback -->
+    <g transform="translate(400,200)">
+        <rect x="0" y="0" width="300" height="180" rx="10" fill="#e8f5e9" stroke="#a5d6a7" stroke-width="2"/>
+        <text x="150" y="30" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">LLM Feedback</text>
+        <rect x="20" y="50" width="120" height="40" rx="5" fill="white" stroke="#a5d6a7"/>
+        <text x="80" y="75" text-anchor="middle" font-family="Arial" font-size="12">Missing Concepts</text>
+        <rect x="160" y="50" width="120" height="40" rx="5" fill="white" stroke="#a5d6a7"/>
+        <text x="220" y="75" text-anchor="middle" font-family="Arial" font-size="12">Areas of Strength</text>
+        <rect x="90" y="110" width="120" height="40" rx="5" fill="white" stroke="#a5d6a7"/>
+        <text x="150" y="135" text-anchor="middle" font-family="Arial" font-size="12">Improvements</text>
+    </g>
+
+    <!-- Final Output -->
+    <g transform="translate(250,420)">
+        <rect x="0" y="0" width="300" height="100" rx="10" fill="#fce4ec" stroke="#f48fb1" stroke-width="2"/>
+        <text x="150" y="40" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Final Output</text>
+        <text x="150" y="70" text-anchor="middle" font-family="Arial" font-size="12">Detailed Feedback Report</text>
+    </g>
+
+    <!-- Arrows -->
+    <g stroke="#666" stroke-width="2" fill="none">
+        <!-- Input to Question Generation -->
+        <path d="M200,100 L300,100" marker-end="url(#arrowhead)"/>
+        <!-- Question Generation to Systems -->
+        <path d="M500,100 L650,100 L650,200" marker-end="url(#arrowhead)"/>
+        <!-- Systems to Final Output -->
+        <path d="M200,380 L200,420" marker-end="url(#arrowhead)"/>
+        <path d="M550,380 L550,420" marker-end="url(#arrowhead)"/>
+    </g>
+
+    <!-- Arrow Marker -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+        </marker>
+    </defs>
+</svg>
