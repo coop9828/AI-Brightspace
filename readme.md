@@ -1,3 +1,4 @@
+### Video Presentation: https://drive.google.com/file/d/1ZY6-mdxqlDPDQpmJXozuN8gVutlOEtW0/view?usp=sharing
 # Brightspace LLM
 
 An AI-powered system that automatically generates discussion questions from educational content, creates grading requirements, and evaluates student responses with detailed feedback. This tool aims to assist educators in creating engaging discussion questions and providing consistent, detailed feedback to students.
