@@ -16,6 +16,7 @@ An AI-powered system that automatically generates discussion questions from educ
   - Numerical scoring with detailed breakdowns
 <details>
   <summary>Generated Information</summary>
+  
   ![Example Output](./images/Questions.png "LLM Generated Questions")
   
   ![Example Output](./images/Requirements.png "LLM Generated Requirements")
