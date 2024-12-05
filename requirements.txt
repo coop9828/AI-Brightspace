@@ -1,0 +1,2 @@
+torch transformers huggingface_hub spacy tensorflow scikit-learn
+spacy download en_core_web_sm
