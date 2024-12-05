@@ -213,9 +213,6 @@ The development and testing of this system revealed several insights:
 2. ["Automated Essay Scoring and the Future of Educational Assessment"](https://eric.ed.gov/?id=EJ1067807)
 3. ["Natural Language Processing in Education"](https://www.sciencedirect.com/science/article/pii/S2666920X21000157)
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## 🙏 Acknowledgments
 
@@ -223,6 +220,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 - Hugging Face for transformer implementations
 - spaCy for NLP tools
 - The educational technology community
-
-[Insert Project Team/Contributors Photos Here]
 
