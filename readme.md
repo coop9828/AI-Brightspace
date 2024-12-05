@@ -1,4 +1,4 @@
-# Auto Discussion Question Generator and Grader
+# Brightspace LLM
 
 An AI-powered system that automatically generates discussion questions from educational content, creates grading requirements, and evaluates student responses with detailed feedback. This tool aims to assist educators in creating engaging discussion questions and providing consistent, detailed feedback to students.
 
