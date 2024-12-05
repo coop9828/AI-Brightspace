@@ -2,7 +2,7 @@
 
 An AI-powered system that automatically generates discussion questions from educational content, creates grading requirements, and evaluates student responses with detailed feedback. This tool aims to assist educators in creating engaging discussion questions and providing consistent, detailed feedback to students.
 
-[Insert System Architecture Diagram Here - showing flow from input text → question generation → grading requirements → student response → feedback]
+![System Architecture Diagram](./images/system-architecture.svg "System Architecture Overview")
 
 ## 🌟 Features
 
@@ -16,8 +16,55 @@ An AI-powered system that automatically generates discussion questions from educ
   - Areas of strength analysis
   - Actionable improvement suggestions
   - Numerical scoring with detailed breakdowns
+<details>
+  <summary>Generated Information</summary>
+  ![Example Output](./images/Questions.png "LLM Generated Questions")
+  ![Example Output](./images/Requirements.png "LLM Generated Requirements")
+  ![Example Output](./images/feedback.png "LLM Generated Questions")
+</details>
 
-[Insert Screenshot of Example Output Here - showing generated question, requirements, and feedback]
+
+## 🤖 Model Information
+
+We utilize Meta's LLaMA-3.2-1B-Instruct model for generating questions and providing feedback. Here's a quick overview:
+
+### Model Details
+- **Name:** LLaMA-3.2-1B-Instruct
+- **Type:** Instruction-tuned Language Model
+- **Size:** 1 Billion Parameters
+- **Provider:** Meta AI
+- **HuggingFace ID:** meta-llama/Llama-3.2-1B-Instruct
+
+### Primary Tasks
+1. Discussion Question Generation
+2. Grading Requirement Creation
+3. Student Response Assessment
+
+### Implementation
+```python
+from transformers import pipeline
+
+model_id = "meta-llama/Llama-3.2-1B-Instruct"
+pipe = pipeline(
+    "text-generation",
+    model=model_id,
+    torch_dtype=torch.bfloat16,
+    device_map="auto",
+)
+```
+
+### Resource Requirements
+- CUDA-compatible GPU (recommended)
+- 8GB+ RAM
+- ~2GB Storage for model weights
+
+### Key Considerations
+- Context window: 1024 tokens
+- Processing time: 2-5 seconds per task
+- No student data retention
+- Local processing only
+- Regular monitoring recommended
+
 
 ## 🏗️ Project Structure
 
@@ -50,8 +97,7 @@ scikit-learn>=1.3.0
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/auto-discussion-grader.git
-cd auto-discussion-grader
+git clone https://github.com/coop9828/AI-Brightspace.git
 ```
 
 2. Install dependencies:
@@ -66,8 +112,6 @@ python -m spacy download en_core_web_sm
 export HUGGINGFACE_TOKEN='your_token_here'
 ```
 
-[Insert Screenshot of Successful Setup Here]
-
 ## 💡 Usage
 
 ### Basic Usage
@@ -79,8 +123,6 @@ python main_app.py --input_file path/to/lecture.txt
 ```bash
 python main_app.py --input_file path/to/lecture.txt --model meta-llama/Llama-3.2-1B-Instruct --threshold 0.6
 ```
-
-[Insert GIF/Video of Usage Example Here]
 
 ## 🔍 Components
 
@@ -141,4 +183,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 - Hugging Face for transformer implementations
 - spaCy for NLP tools
 - The educational technology community
+
+[Insert Project Team/Contributors Photos Here]
 
